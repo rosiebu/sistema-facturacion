@@ -1,0 +1,68 @@
+D:\UNAPEC\UNAPEC\CRUDS\CRUDS\bin\Debug\CRUDS.exe.config
+D:\UNAPEC\UNAPEC\CRUDS\CRUDS\bin\Debug\CRUDS.exe
+D:\UNAPEC\UNAPEC\CRUDS\CRUDS\bin\Debug\CRUDS.pdb
+D:\UNAPEC\UNAPEC\CRUDS\CRUDS\obj\Debug\CRUDS.csprojAssemblyReference.cache
+D:\UNAPEC\UNAPEC\CRUDS\CRUDS\obj\Debug\CRUDS.Form1.resources
+D:\UNAPEC\UNAPEC\CRUDS\CRUDS\obj\Debug\CRUDS.Properties.Resources.resources
+D:\UNAPEC\UNAPEC\CRUDS\CRUDS\obj\Debug\CRUDS.csproj.GenerateResource.cache
+D:\UNAPEC\UNAPEC\CRUDS\CRUDS\obj\Debug\CRUDS.csproj.CoreCompileInputs.cache
+D:\UNAPEC\UNAPEC\CRUDS\CRUDS\obj\Debug\CRUDS.exe
+D:\UNAPEC\UNAPEC\CRUDS\CRUDS\obj\Debug\CRUDS.pdb
+D:\UNAPEC\UNAPEC\CRUDS\CRUDS\obj\Debug\CRUDS.FrmArticulos.resources
+D:\UNAPEC\UNAPEC\CRUDS\CRUDS\obj\Debug\CRUDS.FrmClientes.resources
+D:\UNAPEC\UNAPEC\CRUDS\CRUDS\obj\Debug\CRUDS.FrmVendedores.resources
+D:\UNAPEC\UNAPEC\CRUDS\CRUDS\obj\Debug\CRUDS.FrmEdVendedor.resources
+D:\UNAPEC\UNAPEC\CRUDS\CRUDS\obj\Debug\CRUDS.FrmCondicionesDePago.resources
+C:\Users\christopher\OneDrive - Universidad APEC - Academico\ISO-605 DES. SOFT. CON TECONOLOGIA O\CRUDS\CRUDS\bin\Debug\CRUDS.exe.config
+C:\Users\christopher\OneDrive - Universidad APEC - Academico\ISO-605 DES. SOFT. CON TECONOLOGIA O\CRUDS\CRUDS\bin\Debug\CRUDS.exe
+C:\Users\christopher\OneDrive - Universidad APEC - Academico\ISO-605 DES. SOFT. CON TECONOLOGIA O\CRUDS\CRUDS\bin\Debug\CRUDS.pdb
+C:\Users\christopher\OneDrive - Universidad APEC - Academico\ISO-605 DES. SOFT. CON TECONOLOGIA O\CRUDS\CRUDS\obj\Debug\CRUDS.csprojAssemblyReference.cache
+C:\Users\christopher\OneDrive - Universidad APEC - Academico\ISO-605 DES. SOFT. CON TECONOLOGIA O\CRUDS\CRUDS\obj\Debug\CRUDS.Form1.resources
+C:\Users\christopher\OneDrive - Universidad APEC - Academico\ISO-605 DES. SOFT. CON TECONOLOGIA O\CRUDS\CRUDS\obj\Debug\CRUDS.FrmArticulos.resources
+C:\Users\christopher\OneDrive - Universidad APEC - Academico\ISO-605 DES. SOFT. CON TECONOLOGIA O\CRUDS\CRUDS\obj\Debug\CRUDS.FrmClientes.resources
+C:\Users\christopher\OneDrive - Universidad APEC - Academico\ISO-605 DES. SOFT. CON TECONOLOGIA O\CRUDS\CRUDS\obj\Debug\CRUDS.FrmCondicionesDePago.resources
+C:\Users\christopher\OneDrive - Universidad APEC - Academico\ISO-605 DES. SOFT. CON TECONOLOGIA O\CRUDS\CRUDS\obj\Debug\CRUDS.FrmEdVendedor.resources
+C:\Users\christopher\OneDrive - Universidad APEC - Academico\ISO-605 DES. SOFT. CON TECONOLOGIA O\CRUDS\CRUDS\obj\Debug\CRUDS.FrmVendedores.resources
+C:\Users\christopher\OneDrive - Universidad APEC - Academico\ISO-605 DES. SOFT. CON TECONOLOGIA O\CRUDS\CRUDS\obj\Debug\CRUDS.Properties.Resources.resources
+C:\Users\christopher\OneDrive - Universidad APEC - Academico\ISO-605 DES. SOFT. CON TECONOLOGIA O\CRUDS\CRUDS\obj\Debug\CRUDS.csproj.GenerateResource.cache
+C:\Users\christopher\OneDrive - Universidad APEC - Academico\ISO-605 DES. SOFT. CON TECONOLOGIA O\CRUDS\CRUDS\obj\Debug\CRUDS.csproj.CoreCompileInputs.cache
+C:\Users\christopher\OneDrive - Universidad APEC - Academico\ISO-605 DES. SOFT. CON TECONOLOGIA O\CRUDS\CRUDS\obj\Debug\CRUDS.exe
+C:\Users\christopher\OneDrive - Universidad APEC - Academico\ISO-605 DES. SOFT. CON TECONOLOGIA O\CRUDS\CRUDS\obj\Debug\CRUDS.pdb
+C:\Users\christopher\OneDrive - Universidad APEC - Academico\ISO-605 DES. SOFT. CON TECONOLOGIA O\CRUDS\CRUDS\obj\Debug\CRUDS.FrmArticulo.resources
+C:\Users\christopher\OneDrive - Universidad APEC - Academico\ISO-605 DES. SOFT. CON TECONOLOGIA O\CRUDS\CRUDS\obj\Debug\CRUDS.FrmCondicionesDePagos.resources
+D:\UNAPEC\UNAPEC\CRUDS 2\CRUDS\CRUDS\bin\Debug\CRUDS.exe.config
+D:\UNAPEC\UNAPEC\CRUDS 2\CRUDS\CRUDS\bin\Debug\CRUDS.exe
+D:\UNAPEC\UNAPEC\CRUDS 2\CRUDS\CRUDS\bin\Debug\CRUDS.pdb
+D:\UNAPEC\UNAPEC\CRUDS 2\CRUDS\CRUDS\obj\Debug\CRUDS.csprojAssemblyReference.cache
+D:\UNAPEC\UNAPEC\CRUDS 2\CRUDS\CRUDS\obj\Debug\CRUDS.Form1.resources
+D:\UNAPEC\UNAPEC\CRUDS 2\CRUDS\CRUDS\obj\Debug\CRUDS.FrmCondicionesDePagos.resources
+D:\UNAPEC\UNAPEC\CRUDS 2\CRUDS\CRUDS\obj\Debug\CRUDS.FrmArticulo.resources
+D:\UNAPEC\UNAPEC\CRUDS 2\CRUDS\CRUDS\obj\Debug\CRUDS.FrmArticulos.resources
+D:\UNAPEC\UNAPEC\CRUDS 2\CRUDS\CRUDS\obj\Debug\CRUDS.FrmClientes.resources
+D:\UNAPEC\UNAPEC\CRUDS 2\CRUDS\CRUDS\obj\Debug\CRUDS.FrmCondicionesDePago.resources
+D:\UNAPEC\UNAPEC\CRUDS 2\CRUDS\CRUDS\obj\Debug\CRUDS.FrmEdVendedor.resources
+D:\UNAPEC\UNAPEC\CRUDS 2\CRUDS\CRUDS\obj\Debug\CRUDS.FrmVendedores.resources
+D:\UNAPEC\UNAPEC\CRUDS 2\CRUDS\CRUDS\obj\Debug\CRUDS.Properties.Resources.resources
+D:\UNAPEC\UNAPEC\CRUDS 2\CRUDS\CRUDS\obj\Debug\CRUDS.csproj.GenerateResource.cache
+D:\UNAPEC\UNAPEC\CRUDS 2\CRUDS\CRUDS\obj\Debug\CRUDS.csproj.CoreCompileInputs.cache
+D:\UNAPEC\UNAPEC\CRUDS 2\CRUDS\CRUDS\obj\Debug\CRUDS.exe
+D:\UNAPEC\UNAPEC\CRUDS 2\CRUDS\CRUDS\obj\Debug\CRUDS.pdb
+D:\UNAPEC\UNAPEC\CRUDS 2\CRUDS\CRUDS\obj\Debug\CRUDS.FrmEdCliente.resources
+D:\UNAPEC\UNAPEC\Todos CRUDS\Todos CRUDS\CRUDS\bin\Debug\CRUDS.exe.config
+D:\UNAPEC\UNAPEC\Todos CRUDS\Todos CRUDS\CRUDS\bin\Debug\CRUDS.exe
+D:\UNAPEC\UNAPEC\Todos CRUDS\Todos CRUDS\CRUDS\bin\Debug\CRUDS.pdb
+D:\UNAPEC\UNAPEC\Todos CRUDS\Todos CRUDS\CRUDS\obj\Debug\CRUDS.csprojAssemblyReference.cache
+D:\UNAPEC\UNAPEC\Todos CRUDS\Todos CRUDS\CRUDS\obj\Debug\CRUDS.Form1.resources
+D:\UNAPEC\UNAPEC\Todos CRUDS\Todos CRUDS\CRUDS\obj\Debug\CRUDS.FrmCondicionesDePagos.resources
+D:\UNAPEC\UNAPEC\Todos CRUDS\Todos CRUDS\CRUDS\obj\Debug\CRUDS.FrmArticulo.resources
+D:\UNAPEC\UNAPEC\Todos CRUDS\Todos CRUDS\CRUDS\obj\Debug\CRUDS.FrmArticulos.resources
+D:\UNAPEC\UNAPEC\Todos CRUDS\Todos CRUDS\CRUDS\obj\Debug\CRUDS.FrmClientes.resources
+D:\UNAPEC\UNAPEC\Todos CRUDS\Todos CRUDS\CRUDS\obj\Debug\CRUDS.FrmCondicionesDePago.resources
+D:\UNAPEC\UNAPEC\Todos CRUDS\Todos CRUDS\CRUDS\obj\Debug\CRUDS.FrmEdCliente.resources
+D:\UNAPEC\UNAPEC\Todos CRUDS\Todos CRUDS\CRUDS\obj\Debug\CRUDS.FrmEdVendedor.resources
+D:\UNAPEC\UNAPEC\Todos CRUDS\Todos CRUDS\CRUDS\obj\Debug\CRUDS.FrmVendedores.resources
+D:\UNAPEC\UNAPEC\Todos CRUDS\Todos CRUDS\CRUDS\obj\Debug\CRUDS.Properties.Resources.resources
+D:\UNAPEC\UNAPEC\Todos CRUDS\Todos CRUDS\CRUDS\obj\Debug\CRUDS.csproj.GenerateResource.cache
+D:\UNAPEC\UNAPEC\Todos CRUDS\Todos CRUDS\CRUDS\obj\Debug\CRUDS.csproj.CoreCompileInputs.cache
+D:\UNAPEC\UNAPEC\Todos CRUDS\Todos CRUDS\CRUDS\obj\Debug\CRUDS.exe
+D:\UNAPEC\UNAPEC\Todos CRUDS\Todos CRUDS\CRUDS\obj\Debug\CRUDS.pdb

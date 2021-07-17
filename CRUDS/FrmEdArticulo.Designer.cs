@@ -102,16 +102,46 @@ namespace CRUDS
             // numCosto
             // 
             this.numCosto.Location = new System.Drawing.Point(110, 73);
+            this.numCosto.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.numCosto.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numCosto.Name = "numCosto";
             this.numCosto.Size = new System.Drawing.Size(52, 20);
             this.numCosto.TabIndex = 11;
+            this.numCosto.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // numPrecio
             // 
             this.numPrecio.Location = new System.Drawing.Point(110, 98);
+            this.numPrecio.Maximum = new decimal(new int[] {
+            999999,
+            0,
+            0,
+            0});
+            this.numPrecio.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numPrecio.Name = "numPrecio";
             this.numPrecio.Size = new System.Drawing.Size(52, 20);
             this.numPrecio.TabIndex = 10;
+            this.numPrecio.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // cbxEstado
             // 

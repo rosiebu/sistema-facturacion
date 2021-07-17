@@ -31,7 +31,7 @@ namespace CRUDS
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.TxtEstado = new System.Windows.Forms.TextBox();
+            this.cbxEstado = new System.Windows.Forms.CheckBox();
             this.TxtComision = new System.Windows.Forms.TextBox();
             this.TxtNombre = new System.Windows.Forms.TextBox();
             this.TxtID = new System.Windows.Forms.TextBox();
@@ -75,7 +75,7 @@ namespace CRUDS
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.TxtEstado);
+            this.panel2.Controls.Add(this.cbxEstado);
             this.panel2.Controls.Add(this.TxtComision);
             this.panel2.Controls.Add(this.TxtNombre);
             this.panel2.Controls.Add(this.TxtID);
@@ -88,12 +88,14 @@ namespace CRUDS
             this.panel2.Size = new System.Drawing.Size(527, 179);
             this.panel2.TabIndex = 7;
             // 
-            // TxtEstado
+            // cbxEstado
             // 
-            this.TxtEstado.Location = new System.Drawing.Point(76, 132);
-            this.TxtEstado.Name = "TxtEstado";
-            this.TxtEstado.Size = new System.Drawing.Size(62, 20);
-            this.TxtEstado.TabIndex = 6;
+            this.cbxEstado.AutoSize = true;
+            this.cbxEstado.Location = new System.Drawing.Point(76, 135);
+            this.cbxEstado.Name = "cbxEstado";
+            this.cbxEstado.Size = new System.Drawing.Size(15, 14);
+            this.cbxEstado.TabIndex = 7;
+            this.cbxEstado.UseVisualStyleBackColor = true;
             // 
             // TxtComision
             // 
@@ -113,6 +115,7 @@ namespace CRUDS
             // 
             this.TxtID.Location = new System.Drawing.Point(76, 23);
             this.TxtID.Name = "TxtID";
+            this.TxtID.ReadOnly = true;
             this.TxtID.Size = new System.Drawing.Size(38, 20);
             this.TxtID.TabIndex = 3;
             // 
@@ -279,7 +282,6 @@ namespace CRUDS
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox TxtEstado;
         private System.Windows.Forms.TextBox TxtComision;
         private System.Windows.Forms.TextBox TxtNombre;
         private System.Windows.Forms.TextBox TxtID;
@@ -290,5 +292,6 @@ namespace CRUDS
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button BtnEliminar;
         private System.Windows.Forms.Button BtnAgregar;
+        private System.Windows.Forms.CheckBox cbxEstado;
     }
 }

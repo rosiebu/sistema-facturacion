@@ -38,11 +38,11 @@ namespace CRUDS
             this.TxtNombre = new System.Windows.Forms.TextBox();
             this.TxtApellido = new System.Windows.Forms.TextBox();
             this.TxtDocumento = new System.Windows.Forms.TextBox();
-            this.TxtIDPago = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.BtnAgregar = new System.Windows.Forms.Button();
+            this.comboIDpago = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -50,7 +50,7 @@ namespace CRUDS
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 21);
+            this.label1.Location = new System.Drawing.Point(16, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(21, 13);
             this.label1.TabIndex = 0;
@@ -68,7 +68,7 @@ namespace CRUDS
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(14, 103);
+            this.label3.Location = new System.Drawing.Point(14, 94);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 2;
@@ -77,7 +77,7 @@ namespace CRUDS
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(14, 145);
+            this.label4.Location = new System.Drawing.Point(14, 125);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 13);
             this.label4.TabIndex = 3;
@@ -86,7 +86,7 @@ namespace CRUDS
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(14, 184);
+            this.label5.Location = new System.Drawing.Point(14, 156);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 13);
             this.label5.TabIndex = 4;
@@ -94,8 +94,9 @@ namespace CRUDS
             // 
             // TxtID
             // 
-            this.TxtID.Location = new System.Drawing.Point(102, 18);
+            this.TxtID.Location = new System.Drawing.Point(102, 22);
             this.TxtID.Name = "TxtID";
+            this.TxtID.ReadOnly = true;
             this.TxtID.Size = new System.Drawing.Size(53, 20);
             this.TxtID.TabIndex = 5;
             // 
@@ -108,30 +109,23 @@ namespace CRUDS
             // 
             // TxtApellido
             // 
-            this.TxtApellido.Location = new System.Drawing.Point(102, 99);
+            this.TxtApellido.Location = new System.Drawing.Point(102, 91);
             this.TxtApellido.Name = "TxtApellido";
             this.TxtApellido.Size = new System.Drawing.Size(192, 20);
             this.TxtApellido.TabIndex = 7;
             // 
             // TxtDocumento
             // 
-            this.TxtDocumento.Location = new System.Drawing.Point(102, 145);
+            this.TxtDocumento.Location = new System.Drawing.Point(102, 123);
             this.TxtDocumento.Name = "TxtDocumento";
             this.TxtDocumento.Size = new System.Drawing.Size(174, 20);
             this.TxtDocumento.TabIndex = 8;
             // 
-            // TxtIDPago
-            // 
-            this.TxtIDPago.Location = new System.Drawing.Point(102, 184);
-            this.TxtIDPago.Name = "TxtIDPago";
-            this.TxtIDPago.Size = new System.Drawing.Size(35, 20);
-            this.TxtIDPago.TabIndex = 9;
-            // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.comboIDpago);
             this.panel1.Controls.Add(this.TxtID);
-            this.panel1.Controls.Add(this.TxtIDPago);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.TxtDocumento);
             this.panel1.Controls.Add(this.label2);
@@ -177,6 +171,18 @@ namespace CRUDS
             this.BtnAgregar.UseVisualStyleBackColor = true;
             this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
+            // comboIDpago
+            // 
+            this.comboIDpago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboIDpago.FormattingEnabled = true;
+            this.comboIDpago.Items.AddRange(new object[] {
+            "1",
+            "2"});
+            this.comboIDpago.Location = new System.Drawing.Point(102, 154);
+            this.comboIDpago.Name = "comboIDpago";
+            this.comboIDpago.Size = new System.Drawing.Size(121, 21);
+            this.comboIDpago.TabIndex = 10;
+            // 
             // FrmEdCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -185,7 +191,7 @@ namespace CRUDS
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "FrmEdCliente";
-            this.Text = "FrmEdCliente";
+            this.Text = "Editar Cliente";
             this.Load += new System.EventHandler(this.FrmEdCliente_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -205,10 +211,10 @@ namespace CRUDS
         private System.Windows.Forms.TextBox TxtNombre;
         private System.Windows.Forms.TextBox TxtApellido;
         private System.Windows.Forms.TextBox TxtDocumento;
-        private System.Windows.Forms.TextBox TxtIDPago;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button BtnAgregar;
         private System.Windows.Forms.Button BtnEliminar;
+        private System.Windows.Forms.ComboBox comboIDpago;
     }
 }

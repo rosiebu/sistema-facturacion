@@ -95,6 +95,7 @@ namespace CRUDS
             this.DgvCondicionesDePago.RowHeadersWidth = 51;
             this.DgvCondicionesDePago.Size = new System.Drawing.Size(768, 374);
             this.DgvCondicionesDePago.TabIndex = 0;
+            this.DgvCondicionesDePago.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvCondicionesDePago_CellDoubleClick);
             // 
             // panel1
             // 

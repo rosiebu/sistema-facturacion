@@ -2,25 +2,32 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 
 namespace CRUDS
 {
-    public partial class FrmCondicionesDePago : Form
+    public partial class FrmCliente : Form
     {
-        public SqlConnection con = null;
-        public FrmCondicionesDePago()
+        SqlConnection con = null;
+        public FrmCliente()
         {
             InitializeComponent();
-            CbxCriterio.SelectedIndex = 0;
-            ejecutarConsulta();
         }
-        private void FrmCondicionesDePago_Load(object sender, EventArgs e)
+
+        //private void clienteBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        //{
+        //    this.Validate();
+        //    this.clienteBindingSource.EndEdit();
+        //    this.tableAdapterManager.UpdateAll(this.sISTEMAFACTURACIONDataSet);
+
+        //}
+
+        private void FrmClientes_Load(object sender, EventArgs e)
         {
             CbxCriterio.SelectedIndex = 0;
             ejecutarConsulta();
@@ -33,52 +40,53 @@ namespace CRUDS
             {
                 con = new SqlConnection(myCnStr);
                 con.Open();
-                string sql = "select * from CondicionesDePago ";
+                string sql = "select * from Cliente ";
                 sql += "where " + CbxCriterio.Text + " like '%" + TxtABuscar.Text + "%'";
                 sql += " order by " + CbxCriterio.Text;
                 SqlDataAdapter da = new SqlDataAdapter(sql, con);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
-                DgvCondicionesDePago.DataSource = dt;
-                DgvCondicionesDePago.Refresh();
+                DgvClientes.DataSource = dt;
+                DgvClientes.Refresh();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al ejecutar la consulta " + ex.Message);
             }
         }
+
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            FrmEdPago frm = new FrmEdPago();
+            FrmEdCliente frm = new FrmEdCliente();
             frm.Modo = "C";
             frm.con = con;
-
             frm.ShowDialog();
         }
-        private void FrmCondicionesDePago_Activated(object sender, EventArgs e)
-        {
-            ejecutarConsulta();
-        }
-
 
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
             ejecutarConsulta();
         }
+        private void FrmClientes_Activated(object sender, EventArgs e)
+        {
+            ejecutarConsulta();
+        }
 
-        private void DgvCondicionesDePago_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void DgvClientes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
-                DataGridViewRow row = this.DgvCondicionesDePago.SelectedRows[0];
-                FrmEdPago frm = new FrmEdPago();
+                DataGridViewRow row = this.DgvClientes.SelectedRows[0];
+                FrmEdCliente frm = new FrmEdCliente();
                 frm.ID = row.Cells[0].Value.ToString();
-                frm.Descripcion = row.Cells[1].Value.ToString();
-                frm.Dias = row.Cells[2].Value.ToString();
-                frm.Estado = row.Cells[3].Value.ToString();
+                frm.Nombre = row.Cells[1].Value.ToString();
+                frm.Apellido = row.Cells[2].Value.ToString();
+                frm.No_Documento = row.Cells[3].Value.ToString();
+                frm.Id_Condiciones_de_Pago = row.Cells[4].Value.ToString();
                 frm.Modo = "U";
                 frm.con = con;
                 frm.ShowDialog();
+
             }
             catch (Exception ex)
             {
@@ -87,3 +95,5 @@ namespace CRUDS
         }
     }
 }
+
+

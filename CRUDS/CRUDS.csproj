@@ -52,11 +52,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmCondicionesDePagos.cs">
+    <Compile Include="FrmEdPago.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmCondicionesDePagos.Designer.cs">
-      <DependentUpon>FrmCondicionesDePagos.cs</DependentUpon>
+    <Compile Include="FrmEdPago.Designer.cs">
+      <DependentUpon>FrmEdPago.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmArticulo.cs">
       <SubType>Form</SubType>
@@ -64,17 +64,17 @@
     <Compile Include="FrmArticulo.Designer.cs">
       <DependentUpon>FrmArticulo.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmArticulos.cs">
+    <Compile Include="FrmEdArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmArticulos.Designer.cs">
-      <DependentUpon>FrmArticulos.cs</DependentUpon>
+    <Compile Include="FrmEdArticulo.Designer.cs">
+      <DependentUpon>FrmEdArticulo.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmClientes.cs">
+    <Compile Include="FrmCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmClientes.Designer.cs">
-      <DependentUpon>FrmClientes.cs</DependentUpon>
+    <Compile Include="FrmCliente.Designer.cs">
+      <DependentUpon>FrmCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmCondicionesDePago.cs">
       <SubType>Form</SubType>
@@ -94,11 +94,11 @@
     <Compile Include="FrmEdVendedor.Designer.cs">
       <DependentUpon>FrmEdVendedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmVendedores.cs">
+    <Compile Include="FrmVendedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmVendedores.Designer.cs">
-      <DependentUpon>FrmVendedores.cs</DependentUpon>
+    <Compile Include="FrmVendedor.Designer.cs">
+      <DependentUpon>FrmVendedor.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -110,17 +110,17 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmCondicionesDePagos.resx">
-      <DependentUpon>FrmCondicionesDePagos.cs</DependentUpon>
+    <EmbeddedResource Include="FrmEdPago.resx">
+      <DependentUpon>FrmEdPago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmArticulo.resx">
       <DependentUpon>FrmArticulo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmArticulos.resx">
-      <DependentUpon>FrmArticulos.cs</DependentUpon>
+    <EmbeddedResource Include="FrmEdArticulo.resx">
+      <DependentUpon>FrmEdArticulo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmClientes.resx">
-      <DependentUpon>FrmClientes.cs</DependentUpon>
+    <EmbeddedResource Include="FrmCliente.resx">
+      <DependentUpon>FrmCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCondicionesDePago.resx">
       <DependentUpon>FrmCondicionesDePago.cs</DependentUpon>
@@ -131,8 +131,8 @@
     <EmbeddedResource Include="FrmEdVendedor.resx">
       <DependentUpon>FrmEdVendedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmVendedores.resx">
-      <DependentUpon>FrmVendedores.cs</DependentUpon>
+    <EmbeddedResource Include="FrmVendedor.resx">
+      <DependentUpon>FrmVendedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

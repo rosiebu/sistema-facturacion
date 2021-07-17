@@ -46,13 +46,13 @@ namespace CRUDS
 
         private void tiposInventariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmClientes frm = new FrmClientes();
+            FrmCliente frm = new FrmCliente();
             frm.ShowDialog();
         }
 
         private void existeciaXAlmacenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmVendedores frm = new FrmVendedores();
+            FrmVendedor frm = new FrmVendedor();
             frm.ShowDialog();
         }
     }

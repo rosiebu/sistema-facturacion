@@ -8,71 +8,59 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-
 namespace CRUDS
 {
-    public partial class FrmEdVendedor : Form
+    public partial class FrmEdArticulo : Form
     {
         public SqlConnection con { get; set; }
         public String ID { get; set; }
-        public String Nombre { get; set; }
-        public String Comision { get; set; }
+        public String descripcion { get; set; }
+        public float costoUnitario { get; set; }
+        public float precioUnitario { get; set; }
         public String Estado { get; set; }
         public String Modo { get; set; }
-        public FrmEdVendedor()
+        public FrmEdArticulo()
         {
             InitializeComponent();
+
         }
 
-        private void FrmEdVendedor_Load(object sender, EventArgs e)
+        private void FrmArticulos_Load(object sender, EventArgs e)
         {
             if (Modo.Equals("U"))
             {
-                TxtID.Text = ID;
-                TxtNombre.Text = Nombre;
-                TxtComision.Text = Comision;
+                TxtDescripcion.Text = descripcion;
+                numCosto.Text = costoUnitario.ToString();
+                numPrecio.Text = precioUnitario.ToString();
                 currentEstado = Estado;
             }
             TxtID.ReadOnly = true;
         }
-
         public string currentEstado = "False";
-
-        //private void cbxEstado_CheckedChanged(object sender, EventArgs e)
-        //{
-        //    if (cbxEstado.Checked == true)
-        //    {
-        //        currentEstado = "True";
-        //        cbxEstado.CheckState = CheckState.Checked;
-        //    }
-        //    else
-        //    {
-        //        currentEstado = "False";
-        //        cbxEstado.CheckState = CheckState.Unchecked;
-        //    }
-        //}
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
+            string myCnStr = Properties.Settings.Default.SISTEMAFACTURACIONConnectionString;
             string sql = "";
             try
             {
                 if (cbxEstado.CheckState == CheckState.Checked)
                     currentEstado = "True";
-                else 
+                else
                     currentEstado = "False";
 
                 if (Modo.Equals("C"))
                 {
-                    sql += "insert into vendedor (nombre, comision, estado) values ('";
-                    sql += TxtNombre.Text.ToString() + "','";
-                    sql += TxtComision.Text + "','" + currentEstado + "')";
+                    sql += "insert into Articulo (descripcion, consto_unitario, precio_unitario, estado) values ('";
+                    sql += TxtDescripcion.Text + "','";
+                    sql += numCosto.Text.ToString() + "','" + numPrecio.Text.ToString() + "','" + currentEstado + "')";
                 }
                 else
                 {
-                    sql += "Update vendedor set ";
-                    sql += "nombre = '" + TxtNombre.Text.ToString() + "',";
-                    sql += "comision = '" + TxtComision.Text + "',";
+                    sql += "Update Articulo set ";
+                    sql += "descripcion = '" + TxtDescripcion.Text.ToString() + "',";
+                    sql += "consto_unitario = '" + numCosto.Text.ToString() + "',";
+                    sql += "precio_unitario = '" + numPrecio.Text.ToString() + "',";
                     sql += "estado = '" + currentEstado + "' ";
                     sql += "where id = " + TxtID.Text;
                 }
@@ -87,11 +75,11 @@ namespace CRUDS
             }
         }
 
-        private void BtnEliminar_Click(object sender, EventArgs e)
-        {
+        private void BtnEliminar_Click(object sender, EventArgs e) {
+
             try
             {
-                string sql = "delete Vendedor ";
+                string sql = "delete Articulo ";
                 sql += "where id = " + TxtID.Text;
                 SqlCommand cmd = new SqlCommand(sql, con);
                 cmd.ExecuteNonQuery();
@@ -102,8 +90,6 @@ namespace CRUDS
             {
                 MessageBox.Show("Error al eliminar. " + ex.Message);
             }
-        }
-
-
+    }
     }
 }

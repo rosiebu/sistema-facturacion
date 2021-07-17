@@ -37,8 +37,8 @@ namespace CRUDS
                 SqlDataAdapter da = new SqlDataAdapter(sql, con);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
-                DgvArticulos.DataSource = dt;
-                DgvArticulos.Refresh();
+                DgvArticulo.DataSource = dt;
+                DgvArticulo.Refresh();
             }
             catch (Exception ex)
             {
@@ -48,18 +48,26 @@ namespace CRUDS
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            FrmArticulos frm = new FrmArticulos();
+            FrmEdArticulo frm = new FrmEdArticulo();
             frm.Modo = "C";
             frm.con = con;
             frm.ShowDialog();
         }
 
-        private void DgvArticulos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+
+
+        private void FrmArticulo_Load(object sender, EventArgs e)
+        {
+            CbxCriterio.SelectedIndex = 0;
+            ejecutarConsulta();
+        }
+
+        private void DgvArticulo_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
-                DataGridViewRow row = this.DgvArticulos.SelectedRows[0];
-                FrmArticulos frm = new FrmArticulos();
+                DataGridViewRow row = this.DgvArticulo.SelectedRows[0];
+                FrmEdArticulo frm = new FrmEdArticulo();
                 frm.ID = row.Cells[0].Value.ToString();
                 frm.descripcion = row.Cells[1].Value.ToString();
                 frm.costoUnitario = float.Parse(row.Cells[2].Value.ToString());
@@ -74,12 +82,6 @@ namespace CRUDS
             {
                 MessageBox.Show("Error al seleccionar el registro. " + ex.Message);
             }
-        }
-
-        private void FrmArticulo_Load(object sender, EventArgs e)
-        {
-            CbxCriterio.SelectedIndex = 0;
-            ejecutarConsulta();
         }
     }
 }

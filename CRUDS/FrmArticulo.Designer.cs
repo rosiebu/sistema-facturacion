@@ -32,10 +32,10 @@
             this.CbxCriterio = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.TxtABuscar = new System.Windows.Forms.TextBox();
-            this.DgvArticulos = new System.Windows.Forms.DataGridView();
+            this.DgvArticulo = new System.Windows.Forms.DataGridView();
             this.BtnBuscar = new System.Windows.Forms.Button();
             this.BtnAgregar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvArticulos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvArticulo)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -58,7 +58,7 @@
             "Precio Unitario",
             "Estado"});
             this.CbxCriterio.Location = new System.Drawing.Point(61, 16);
-            this.CbxCriterio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CbxCriterio.Margin = new System.Windows.Forms.Padding(2);
             this.CbxCriterio.Name = "CbxCriterio";
             this.CbxCriterio.Size = new System.Drawing.Size(113, 21);
             this.CbxCriterio.TabIndex = 1;
@@ -76,22 +76,22 @@
             // TxtABuscar
             // 
             this.TxtABuscar.Location = new System.Drawing.Point(261, 18);
-            this.TxtABuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtABuscar.Margin = new System.Windows.Forms.Padding(2);
             this.TxtABuscar.Name = "TxtABuscar";
             this.TxtABuscar.Size = new System.Drawing.Size(224, 20);
             this.TxtABuscar.TabIndex = 3;
             // 
-            // DgvArticulos
+            // DgvArticulo
             // 
-            this.DgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvArticulos.Location = new System.Drawing.Point(20, 73);
-            this.DgvArticulos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.DgvArticulos.Name = "DgvArticulos";
-            this.DgvArticulos.RowHeadersWidth = 51;
-            this.DgvArticulos.RowTemplate.Height = 24;
-            this.DgvArticulos.Size = new System.Drawing.Size(614, 308);
-            this.DgvArticulos.TabIndex = 4;
-            this.DgvArticulos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvArticulos_CellContentClick);
+            this.DgvArticulo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvArticulo.Location = new System.Drawing.Point(20, 73);
+            this.DgvArticulo.Margin = new System.Windows.Forms.Padding(2);
+            this.DgvArticulo.Name = "DgvArticulo";
+            this.DgvArticulo.RowHeadersWidth = 51;
+            this.DgvArticulo.RowTemplate.Height = 24;
+            this.DgvArticulo.Size = new System.Drawing.Size(614, 308);
+            this.DgvArticulo.TabIndex = 4;
+            this.DgvArticulo.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvArticulo_CellDoubleClick);
             // 
             // BtnBuscar
             // 
@@ -122,16 +122,16 @@
             this.ClientSize = new System.Drawing.Size(650, 391);
             this.Controls.Add(this.BtnAgregar);
             this.Controls.Add(this.BtnBuscar);
-            this.Controls.Add(this.DgvArticulos);
+            this.Controls.Add(this.DgvArticulo);
             this.Controls.Add(this.TxtABuscar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.CbxCriterio);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmArticulo";
             this.Text = "Articulos";
             this.Load += new System.EventHandler(this.FrmArticulo_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DgvArticulos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvArticulo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -143,7 +143,7 @@
         private System.Windows.Forms.ComboBox CbxCriterio;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TxtABuscar;
-        private System.Windows.Forms.DataGridView DgvArticulos;
+        private System.Windows.Forms.DataGridView DgvArticulo;
         private System.Windows.Forms.Button BtnBuscar;
         private System.Windows.Forms.Button BtnAgregar;
     }

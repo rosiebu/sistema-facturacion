@@ -28,9 +28,9 @@ namespace CRUDS.Properties {
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-NTBUCGO\\INSTANCIA1;Initial Catalog=SISTEMAFACTURACION;Integra" +
             "ted Security=True")]
-        public string SISTEMAFACTURACIONConnectionString {
+        public string SISTEMAFACTURACIONConnectionString3 {
             get {
-                return ((string)(this["SISTEMAFACTURACIONConnectionString"]));
+                return ((string)(this["SISTEMAFACTURACIONConnectionString3"]));
             }
         }
         
@@ -48,8 +48,19 @@ namespace CRUDS.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=SISTEMAFACTURACION;Integrated " +
-            "Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=SISTEMAFACTURACION2;Integrated" +
+            " Security=True")]
+        public string SISTEMAFACTURACIONConnectionString {
+            get {
+                return ((string)(this["SISTEMAFACTURACIONConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-NTBUCGO\\INSTANCIA1;Initial Catalog=SISTEMAFACTURACION;Integra" +
+            "ted Security=True")]
         public string SISTEMAFACTURACIONConnectionString1 {
             get {
                 return ((string)(this["SISTEMAFACTURACIONConnectionString1"]));

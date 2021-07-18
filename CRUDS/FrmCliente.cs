@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,63 +12,46 @@ namespace CRUDS
 {
     public partial class FrmCliente : Form
     {
-        SqlConnection con = null;
+
+        Connection conection = new Connection();
+
+        string table = "cliente";
+
         public FrmCliente()
         {
             InitializeComponent();
         }
 
-        //private void clienteBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        //{
-        //    this.Validate();
-        //    this.clienteBindingSource.EndEdit();
-        //    this.tableAdapterManager.UpdateAll(this.sISTEMAFACTURACIONDataSet);
-
-        //}
-
         private void FrmClientes_Load(object sender, EventArgs e)
         {
             CbxCriterio.SelectedIndex = 0;
-            ejecutarConsulta();
+            buscar();
         }
 
-        private void ejecutarConsulta()
-        {
-            string myCnStr = Properties.Settings.Default.SISTEMAFACTURACIONConnectionString;
-            try
-            {
-                con = new SqlConnection(myCnStr);
-                con.Open();
-                string sql = "select * from Cliente ";
-                sql += "where " + CbxCriterio.Text + " like '%" + TxtABuscar.Text + "%'";
-                sql += " order by " + CbxCriterio.Text;
-                SqlDataAdapter da = new SqlDataAdapter(sql, con);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                DgvClientes.DataSource = dt;
-                DgvClientes.Refresh();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al ejecutar la consulta " + ex.Message);
-            }
-        }
+        
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
             FrmEdCliente frm = new FrmEdCliente();
             frm.Modo = "C";
-            frm.con = con;
+            frm.con = conection.con;
             frm.ShowDialog();
         }
 
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
-            ejecutarConsulta();
+
+            buscar();
         }
         private void FrmClientes_Activated(object sender, EventArgs e)
         {
-            ejecutarConsulta();
+            buscar();
+        }
+        private void buscar()
+        {
+            DataTable dt = conection.ejecutarConsulta(table, CbxCriterio.Text, TxtABuscar.Text);
+            DgvClientes.DataSource = dt;
+            DgvClientes.Refresh();
         }
 
         private void DgvClientes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -84,7 +66,7 @@ namespace CRUDS
                 frm.No_Documento = row.Cells[3].Value.ToString();
                 frm.Id_Condiciones_de_Pago = row.Cells[4].Value.ToString();
                 frm.Modo = "U";
-                frm.con = con;
+                frm.con = conection.con;
                 frm.ShowDialog();
 
             }

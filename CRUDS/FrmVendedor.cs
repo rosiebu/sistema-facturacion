@@ -13,50 +13,39 @@ namespace CRUDS
 {
     public partial class FrmVendedor : Form
     {
-        SqlConnection con = null;
+
+        Connection conection = new Connection();
+
+        string table = "Vendedor";
+
         public FrmVendedor()
         {
             InitializeComponent();
         }
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
-            ejecutarConsulta();
+            buscar();
+            
         }
-        private void ejecutarConsulta()
+        private void buscar()
         {
-            try
-            {
-                con = new SqlConnection("Data Source=DESKTOP-NTBUCGO\\INSTANCIA1;Initial Catalog=SISTEMAFACTURACION;Integrated Security=True");
-                con.Open();
-                string sql = "select * from Vendedor ";
-                sql += "where " + CbxCriterio.Text + " like '%" + TxtABuscar.Text + "%'";
-                sql += " order by " + CbxCriterio.Text;
-                SqlDataAdapter da = new SqlDataAdapter(sql, con);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                DgvVendedores.DataSource = dt;
-                DgvVendedores.Refresh();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al ejecutar la consulta " + ex.Message);
-            }
+            DataTable dt = conection.ejecutarConsulta(table, CbxCriterio.Text, TxtABuscar.Text);
+            DgvVendedores.DataSource = dt;
+            DgvVendedores.Refresh();
         }
-
-
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
             FrmEdVendedor frm = new FrmEdVendedor();
             frm.Modo = "C";
-            frm.con = con;
+            frm.con = conection.con;
 
             frm.ShowDialog();
         }
 
         private void FrmVendedores_Activated(object sender, EventArgs e)
         {
-            ejecutarConsulta();
+            buscar();
         }
 
         private void DgvVendedores_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -70,7 +59,7 @@ namespace CRUDS
                 frm.Comision = row.Cells[2].Value.ToString();
                 frm.Estado = row.Cells[3].Value.ToString();
                 frm.Modo = "U";
-                frm.con = con;
+                frm.con = conection.con;
                 frm.ShowDialog();
 
             }
@@ -82,7 +71,7 @@ namespace CRUDS
         private void FrmVendedores_Load(object sender, EventArgs e)
         {
             CbxCriterio.SelectedIndex = 0;
-            ejecutarConsulta();
+            buscar();
         }
     }
 }

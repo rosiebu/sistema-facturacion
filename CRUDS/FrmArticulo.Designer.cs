@@ -41,10 +41,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 20);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(24, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 13);
+            this.label1.Size = new System.Drawing.Size(53, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Criterio";
             // 
@@ -57,39 +56,38 @@
             "Costo Unitario",
             "Precio Unitario",
             "Estado"});
-            this.CbxCriterio.Location = new System.Drawing.Point(61, 16);
-            this.CbxCriterio.Margin = new System.Windows.Forms.Padding(2);
+            this.CbxCriterio.Location = new System.Drawing.Point(81, 20);
+            this.CbxCriterio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CbxCriterio.Name = "CbxCriterio";
-            this.CbxCriterio.Size = new System.Drawing.Size(113, 21);
+            this.CbxCriterio.Size = new System.Drawing.Size(149, 24);
             this.CbxCriterio.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(211, 22);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(281, 27);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 13);
+            this.label2.Size = new System.Drawing.Size(60, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "Buscar: ";
             // 
             // TxtABuscar
             // 
-            this.TxtABuscar.Location = new System.Drawing.Point(261, 18);
-            this.TxtABuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtABuscar.Location = new System.Drawing.Point(348, 22);
+            this.TxtABuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtABuscar.Name = "TxtABuscar";
-            this.TxtABuscar.Size = new System.Drawing.Size(224, 20);
+            this.TxtABuscar.Size = new System.Drawing.Size(297, 22);
             this.TxtABuscar.TabIndex = 3;
             // 
             // DgvArticulo
             // 
             this.DgvArticulo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvArticulo.Location = new System.Drawing.Point(20, 73);
-            this.DgvArticulo.Margin = new System.Windows.Forms.Padding(2);
+            this.DgvArticulo.Location = new System.Drawing.Point(27, 90);
+            this.DgvArticulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DgvArticulo.Name = "DgvArticulo";
-            this.DgvArticulo.RowHeadersWidth = 51;
+            this.DgvArticulo.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.DgvArticulo.RowTemplate.Height = 24;
-            this.DgvArticulo.Size = new System.Drawing.Size(614, 308);
+            this.DgvArticulo.Size = new System.Drawing.Size(819, 379);
             this.DgvArticulo.TabIndex = 4;
             this.DgvArticulo.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvArticulo_CellDoubleClick);
             // 
@@ -97,9 +95,10 @@
             // 
             this.BtnBuscar.BackgroundImage = global::CRUDS.Properties.Resources.search;
             this.BtnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnBuscar.Location = new System.Drawing.Point(512, 13);
+            this.BtnBuscar.Location = new System.Drawing.Point(683, 16);
+            this.BtnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnBuscar.Name = "BtnBuscar";
-            this.BtnBuscar.Size = new System.Drawing.Size(32, 33);
+            this.BtnBuscar.Size = new System.Drawing.Size(43, 41);
             this.BtnBuscar.TabIndex = 5;
             this.BtnBuscar.UseVisualStyleBackColor = true;
             this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
@@ -108,18 +107,19 @@
             // 
             this.BtnAgregar.BackgroundImage = global::CRUDS.Properties.Resources.plus;
             this.BtnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnAgregar.Location = new System.Drawing.Point(582, 15);
+            this.BtnAgregar.Location = new System.Drawing.Point(776, 18);
+            this.BtnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnAgregar.Name = "BtnAgregar";
-            this.BtnAgregar.Size = new System.Drawing.Size(32, 31);
+            this.BtnAgregar.Size = new System.Drawing.Size(43, 38);
             this.BtnAgregar.TabIndex = 6;
             this.BtnAgregar.UseVisualStyleBackColor = true;
             this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
             // FrmArticulo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(650, 391);
+            this.ClientSize = new System.Drawing.Size(867, 481);
             this.Controls.Add(this.BtnAgregar);
             this.Controls.Add(this.BtnBuscar);
             this.Controls.Add(this.DgvArticulo);
@@ -127,7 +127,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.CbxCriterio);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmArticulo";
             this.Text = "Articulos";
             this.Load += new System.EventHandler(this.FrmArticulo_Load);

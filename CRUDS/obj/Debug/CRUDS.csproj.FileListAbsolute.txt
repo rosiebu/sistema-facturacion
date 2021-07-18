@@ -84,3 +84,22 @@ D:\UNAPEC\UNAPEC\Sistema de Facturacion\CRUDS\obj\Debug\CRUDS.FrmEdPago.resource
 D:\UNAPEC\UNAPEC\Sistema de Facturacion\CRUDS\obj\Debug\CRUDS.FrmCliente.resources
 D:\UNAPEC\UNAPEC\Sistema de Facturacion\CRUDS\obj\Debug\CRUDS.FrmEdArticulo.resources
 D:\UNAPEC\UNAPEC\Sistema de Facturacion\CRUDS\obj\Debug\CRUDS.FrmVendedor.resources
+C:\Users\christopher\Desktop\UNIVERSIDAD\sistema-facturacion\CRUDS\bin\Debug\CRUDS.exe.config
+C:\Users\christopher\Desktop\UNIVERSIDAD\sistema-facturacion\CRUDS\bin\Debug\CRUDS.exe
+C:\Users\christopher\Desktop\UNIVERSIDAD\sistema-facturacion\CRUDS\bin\Debug\CRUDS.pdb
+C:\Users\christopher\Desktop\UNIVERSIDAD\sistema-facturacion\CRUDS\obj\Debug\CRUDS.FrmEdPago.resources
+C:\Users\christopher\Desktop\UNIVERSIDAD\sistema-facturacion\CRUDS\obj\Debug\CRUDS.FrmArticulo.resources
+C:\Users\christopher\Desktop\UNIVERSIDAD\sistema-facturacion\CRUDS\obj\Debug\CRUDS.FrmEdArticulo.resources
+C:\Users\christopher\Desktop\UNIVERSIDAD\sistema-facturacion\CRUDS\obj\Debug\CRUDS.FrmCliente.resources
+C:\Users\christopher\Desktop\UNIVERSIDAD\sistema-facturacion\CRUDS\obj\Debug\CRUDS.FrmCondicionesDePago.resources
+C:\Users\christopher\Desktop\UNIVERSIDAD\sistema-facturacion\CRUDS\obj\Debug\CRUDS.FrmEdCliente.resources
+C:\Users\christopher\Desktop\UNIVERSIDAD\sistema-facturacion\CRUDS\obj\Debug\CRUDS.FrmEdVendedor.resources
+C:\Users\christopher\Desktop\UNIVERSIDAD\sistema-facturacion\CRUDS\obj\Debug\CRUDS.FrmVendedor.resources
+C:\Users\christopher\Desktop\UNIVERSIDAD\sistema-facturacion\CRUDS\obj\Debug\CRUDS.Properties.Resources.resources
+C:\Users\christopher\Desktop\UNIVERSIDAD\sistema-facturacion\CRUDS\obj\Debug\CRUDS.csproj.GenerateResource.cache
+C:\Users\christopher\Desktop\UNIVERSIDAD\sistema-facturacion\CRUDS\obj\Debug\CRUDS.csproj.CoreCompileInputs.cache
+C:\Users\christopher\Desktop\UNIVERSIDAD\sistema-facturacion\CRUDS\obj\Debug\CRUDS.exe
+C:\Users\christopher\Desktop\UNIVERSIDAD\sistema-facturacion\CRUDS\obj\Debug\CRUDS.pdb
+C:\Users\christopher\Desktop\UNIVERSIDAD\sistema-facturacion\CRUDS\obj\Debug\CRUDS.csprojAssemblyReference.cache
+C:\Users\christopher\Desktop\UNIVERSIDAD\sistema-facturacion\CRUDS\obj\Debug\CRUDS.FrmMenu.resources
+C:\Users\christopher\Desktop\UNIVERSIDAD\sistema-facturacion\CRUDS\obj\Debug\CRUDS.FrmLogin.resources

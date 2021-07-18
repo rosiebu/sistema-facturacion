@@ -37,11 +37,6 @@ namespace CRUDS
             this.clienteBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.DgvClientes = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nodocumentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idconcicionesdepagoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clienteBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.BtnAgregar = new System.Windows.Forms.Button();
@@ -92,65 +87,25 @@ namespace CRUDS
             // panel1
             // 
             this.panel1.Controls.Add(this.DgvClientes);
-            this.panel1.Location = new System.Drawing.Point(12, 76);
+            this.panel1.Location = new System.Drawing.Point(16, 94);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 299);
+            this.panel1.Size = new System.Drawing.Size(1067, 368);
             this.panel1.TabIndex = 0;
             // 
             // DgvClientes
             // 
             this.DgvClientes.AllowUserToAddRows = false;
             this.DgvClientes.AllowUserToDeleteRows = false;
-            this.DgvClientes.AutoGenerateColumns = false;
             this.DgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.nombreDataGridViewTextBoxColumn,
-            this.apellidoDataGridViewTextBoxColumn,
-            this.nodocumentoDataGridViewTextBoxColumn,
-            this.idconcicionesdepagoDataGridViewTextBoxColumn});
-            this.DgvClientes.DataSource = this.clienteBindingSource2;
-            this.DgvClientes.Location = new System.Drawing.Point(3, 3);
+            this.DgvClientes.Location = new System.Drawing.Point(4, 4);
+            this.DgvClientes.Margin = new System.Windows.Forms.Padding(4);
             this.DgvClientes.Name = "DgvClientes";
             this.DgvClientes.ReadOnly = true;
-            this.DgvClientes.Size = new System.Drawing.Size(794, 293);
+            this.DgvClientes.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.DgvClientes.Size = new System.Drawing.Size(1059, 361);
             this.DgvClientes.TabIndex = 0;
             this.DgvClientes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvClientes_CellDoubleClick);
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // apellidoDataGridViewTextBoxColumn
-            // 
-            this.apellidoDataGridViewTextBoxColumn.DataPropertyName = "apellido";
-            this.apellidoDataGridViewTextBoxColumn.HeaderText = "apellido";
-            this.apellidoDataGridViewTextBoxColumn.Name = "apellidoDataGridViewTextBoxColumn";
-            this.apellidoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nodocumentoDataGridViewTextBoxColumn
-            // 
-            this.nodocumentoDataGridViewTextBoxColumn.DataPropertyName = "no_documento";
-            this.nodocumentoDataGridViewTextBoxColumn.HeaderText = "no_documento";
-            this.nodocumentoDataGridViewTextBoxColumn.Name = "nodocumentoDataGridViewTextBoxColumn";
-            this.nodocumentoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // idconcicionesdepagoDataGridViewTextBoxColumn
-            // 
-            this.idconcicionesdepagoDataGridViewTextBoxColumn.DataPropertyName = "id_conciciones_de_pago";
-            this.idconcicionesdepagoDataGridViewTextBoxColumn.HeaderText = "id_conciciones_de_pago";
-            this.idconcicionesdepagoDataGridViewTextBoxColumn.Name = "idconcicionesdepagoDataGridViewTextBoxColumn";
-            this.idconcicionesdepagoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // clienteBindingSource2
             // 
@@ -165,18 +120,20 @@ namespace CRUDS
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.CbxCriterio);
-            this.panel2.Location = new System.Drawing.Point(12, 12);
+            this.panel2.Location = new System.Drawing.Point(16, 15);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 58);
+            this.panel2.Size = new System.Drawing.Size(1067, 71);
             this.panel2.TabIndex = 1;
             // 
             // BtnAgregar
             // 
             this.BtnAgregar.BackgroundImage = global::CRUDS.Properties.Resources.plus;
             this.BtnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnAgregar.Location = new System.Drawing.Point(756, 14);
+            this.BtnAgregar.Location = new System.Drawing.Point(1008, 17);
+            this.BtnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnAgregar.Name = "BtnAgregar";
-            this.BtnAgregar.Size = new System.Drawing.Size(32, 31);
+            this.BtnAgregar.Size = new System.Drawing.Size(43, 38);
             this.BtnAgregar.TabIndex = 7;
             this.BtnAgregar.UseVisualStyleBackColor = true;
             this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
@@ -185,35 +142,39 @@ namespace CRUDS
             // 
             this.BtnBuscar.BackgroundImage = global::CRUDS.Properties.Resources.search;
             this.BtnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnBuscar.Location = new System.Drawing.Point(684, 14);
+            this.BtnBuscar.Location = new System.Drawing.Point(912, 17);
+            this.BtnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnBuscar.Name = "BtnBuscar";
-            this.BtnBuscar.Size = new System.Drawing.Size(32, 31);
+            this.BtnBuscar.Size = new System.Drawing.Size(43, 38);
             this.BtnBuscar.TabIndex = 6;
             this.BtnBuscar.UseVisualStyleBackColor = true;
             this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // TxtABuscar
             // 
-            this.TxtABuscar.Location = new System.Drawing.Point(352, 21);
+            this.TxtABuscar.Location = new System.Drawing.Point(469, 26);
+            this.TxtABuscar.Margin = new System.Windows.Forms.Padding(4);
             this.TxtABuscar.Name = "TxtABuscar";
-            this.TxtABuscar.Size = new System.Drawing.Size(262, 20);
+            this.TxtABuscar.Size = new System.Drawing.Size(348, 22);
             this.TxtABuscar.TabIndex = 5;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(258, 24);
+            this.label2.Location = new System.Drawing.Point(344, 30);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 13);
+            this.label2.Size = new System.Drawing.Size(123, 17);
             this.label2.TabIndex = 4;
             this.label2.Text = "Palabras a buscar";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 23);
+            this.label1.Location = new System.Drawing.Point(28, 28);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 13);
+            this.label1.Size = new System.Drawing.Size(53, 17);
             this.label1.TabIndex = 3;
             this.label1.Text = "Criterio";
             // 
@@ -227,18 +188,20 @@ namespace CRUDS
             "Apellido",
             "No_Documento",
             "Id_Condiciones_de_Pago"});
-            this.CbxCriterio.Location = new System.Drawing.Point(66, 20);
+            this.CbxCriterio.Location = new System.Drawing.Point(88, 25);
+            this.CbxCriterio.Margin = new System.Windows.Forms.Padding(4);
             this.CbxCriterio.Name = "CbxCriterio";
-            this.CbxCriterio.Size = new System.Drawing.Size(145, 21);
+            this.CbxCriterio.Size = new System.Drawing.Size(192, 24);
             this.CbxCriterio.TabIndex = 2;
             // 
             // FrmCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(824, 400);
+            this.ClientSize = new System.Drawing.Size(1099, 492);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmCliente";
             this.Text = "Gestión de Clientes";
             this.Load += new System.EventHandler(this.FrmClientes_Load);
@@ -263,11 +226,6 @@ namespace CRUDS
         private System.Windows.Forms.BindingSource clienteBindingSource1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView DgvClientes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn apellidoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nodocumentoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idconcicionesdepagoDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource clienteBindingSource2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ComboBox CbxCriterio;

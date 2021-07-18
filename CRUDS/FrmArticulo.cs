@@ -7,50 +7,43 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 
 namespace CRUDS
 {
     public partial class FrmArticulo : Form
     {
-        SqlConnection con = null;
+        
+        Connection conection = new Connection();
+
+        string table = "Articulo";
+
         public FrmArticulo()
         {
             InitializeComponent();
+            
         }
 
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
-            ejecutarConsulta();
-        }
 
-        private void ejecutarConsulta()
-        {
-            string myCnStr = Properties.Settings.Default.SISTEMAFACTURACIONConnectionString;
-            try
-            {
-                con = new SqlConnection(myCnStr);
-                con.Open();
-                string sql = "select * from Articulo ";
-                sql += "where " + CbxCriterio.Text + " like '%" + TxtABuscar.Text + "%'";
-                sql += " order by " + CbxCriterio.Text;
-                SqlDataAdapter da = new SqlDataAdapter(sql, con);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                DgvArticulo.DataSource = dt;
-                DgvArticulo.Refresh();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al ejecutar la consulta " + ex.Message);
-            }
+            buscar();
+
+            
+            //ejecutarConsulta();
         }
+        private void buscar()
+        {
+            DataTable dt = conection.ejecutarConsulta(table, CbxCriterio.Text, TxtABuscar.Text);
+            DgvArticulo.DataSource = dt;
+            DgvArticulo.Refresh();
+        }
+        
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
             FrmEdArticulo frm = new FrmEdArticulo();
             frm.Modo = "C";
-            frm.con = con;
+            frm.con = conection.con;
             frm.ShowDialog();
         }
 
@@ -59,7 +52,7 @@ namespace CRUDS
         private void FrmArticulo_Load(object sender, EventArgs e)
         {
             CbxCriterio.SelectedIndex = 0;
-            ejecutarConsulta();
+            buscar();
         }
 
         private void DgvArticulo_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -74,7 +67,7 @@ namespace CRUDS
                 frm.precioUnitario = float.Parse(row.Cells[3].Value.ToString());
                 frm.Estado = row.Cells[4].Value.ToString();
                 frm.Modo = "U";
-                frm.con = con;
+                frm.con = conection.con;
                 frm.ShowDialog();
 
             }

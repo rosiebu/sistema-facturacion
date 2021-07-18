@@ -3676,7 +3676,7 @@ SELECT id, descripcion, consto_unitario, precio_unitario, estado FROM Articulo W
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::CRUDS.Properties.Settings.Default.SISTEMAFACTURACIONConnectionString;
+            this._connection.ConnectionString = global::CRUDS.Properties.Settings.Default.SISTEMAFACTURACIONConnectionString3;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4058,7 +4058,7 @@ SELECT id, nombre, apellido, no_documento, id_conciciones_de_pago FROM Cliente W
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::CRUDS.Properties.Settings.Default.SISTEMAFACTURACIONConnectionString;
+            this._connection.ConnectionString = global::CRUDS.Properties.Settings.Default.SISTEMAFACTURACIONConnectionString3;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4482,7 +4482,7 @@ SELECT id, descripcion, cantidad_dias, Estado FROM CondicionesDePago WHERE (id =
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::CRUDS.Properties.Settings.Default.SISTEMAFACTURACIONConnectionString;
+            this._connection.ConnectionString = global::CRUDS.Properties.Settings.Default.SISTEMAFACTURACIONConnectionString3;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4890,7 +4890,7 @@ SELECT id, metodo_pago, id_vendedor, id_cliente, fecha, comentario FROM Factura 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::CRUDS.Properties.Settings.Default.SISTEMAFACTURACIONConnectionString;
+            this._connection.ConnectionString = global::CRUDS.Properties.Settings.Default.SISTEMAFACTURACIONConnectionString3;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5355,7 +5355,7 @@ SELECT id, id_factura, id_articulo, cantidad, precio_unitario, total FROM Lineas
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::CRUDS.Properties.Settings.Default.SISTEMAFACTURACIONConnectionString;
+            this._connection.ConnectionString = global::CRUDS.Properties.Settings.Default.SISTEMAFACTURACIONConnectionString3;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5807,7 +5807,7 @@ SELECT id, nombre, comision, estado FROM Vendedor WHERE (id = @id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::CRUDS.Properties.Settings.Default.SISTEMAFACTURACIONConnectionString;
+            this._connection.ConnectionString = global::CRUDS.Properties.Settings.Default.SISTEMAFACTURACIONConnectionString3;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

@@ -12,8 +12,12 @@ namespace CRUDS
 {
     public partial class FrmMenu : Form
     {
-        public FrmMenu()
+        string userPermissionLevel;
+
+
+        public FrmMenu(string userPermission)
         {
+            userPermissionLevel = userPermission;
             InitializeComponent();
         }
 
@@ -24,6 +28,7 @@ namespace CRUDS
 
         private void artículosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
             FrmArticulo frm = new FrmArticulo();
             frm.ShowDialog();
         }

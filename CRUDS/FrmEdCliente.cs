@@ -13,6 +13,7 @@ namespace CRUDS
 {
     public partial class FrmEdCliente : Form
     {
+        private Connection conection;
         public SqlConnection con { get; set; }
         public String ID { get; set; }
         public String Nombre { get; set; }
@@ -22,7 +23,14 @@ namespace CRUDS
         public String Modo { get; set; }
         public FrmEdCliente()
         {
+            
             InitializeComponent();
+            conection = new Connection();
+            comboIDpago.Items.Clear();
+            string[] list = conection.getMany2one("condicionesdepago", "descripcion");
+            comboIDpago.Items.AddRange(list);
+            
+
         }
 
 
@@ -49,13 +57,14 @@ namespace CRUDS
             try
             {
 
-
+                int idPago = conection.getMany2oneId("condicionesdepago", "descripcion", comboIDpago.SelectedItem.ToString());
+                Console.WriteLine(idPago);
                 string sql = "";
                 if (Modo.Equals("C"))
                 {
                     sql += "insert into cliente (nombre, apellido, no_documento, id_conciciones_de_pago) values ('";
                     sql += TxtNombre.Text + "','";
-                    sql += TxtApellido.Text + "','" + TxtDocumento.Text + "','" + comboIDpago.SelectedItem.ToString() + "')";
+                    sql += TxtApellido.Text + "','" + TxtDocumento.Text + "','" + idPago.ToString() + "')";
 
                 }
                 else
@@ -64,11 +73,13 @@ namespace CRUDS
                     sql += "nombre = '" + TxtNombre.Text + "',";
                     sql += "apellido = '" + TxtApellido.Text + "',";
                     sql += "no_documento = '" + TxtDocumento.Text + "',";
-                    sql += "id_conciciones_de_pago = '" + comboIDpago.SelectedItem.ToString() + "' ";
+                    sql += "id_conciciones_de_pago = '" + idPago.ToString() + "' ";
                     sql += "where id = " + TxtID.Text;
                 }
                 SqlCommand cmd = new SqlCommand(sql, con);
+                con.Open();
                 cmd.ExecuteNonQuery();
+                con.Close();
                 MessageBox.Show("Registro guardado exitosamente");
                 this.Close();
             }
@@ -119,31 +130,6 @@ namespace CRUDS
             {
                 MessageBox.Show("Error al eliminar. " + ex.Message);
             }
-        }
-        public static bool validaCedula(string pCedula)
-
-        {
-            int vnTotal = 0;
-            string vcCedula = pCedula.Replace("-", "");
-            int pLongCed = vcCedula.Trim().Length;
-            int[] digitoMult = new int[11] { 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1 };
-
-            if (pLongCed < 11 || pLongCed > 11)
-                return false;
-
-            for (int vDig = 1; vDig <= pLongCed; vDig++)
-            {
-                int vCalculo = Int32.Parse(vcCedula.Substring(vDig - 1, 1)) * digitoMult[vDig - 1];
-                if (vCalculo < 10)
-                    vnTotal += vCalculo;
-                else
-                    vnTotal += Int32.Parse(vCalculo.ToString().Substring(0, 1)) + Int32.Parse(vCalculo.ToString().Substring(1, 1));
-            }
-
-            if (vnTotal % 10 == 0)
-                return true;
-            else
-                return false;
         }
     }
 }

@@ -63,7 +63,9 @@ namespace CRUDS
                     sql += "where id = '" + TxtID.Text;
                 }
                 SqlCommand cmd = new SqlCommand(sql, con);
+                con.Open();
                 cmd.ExecuteNonQuery();
+                con.Close();
                 MessageBox.Show("Registro guardado exitosamente");
                 this.Close();
             }

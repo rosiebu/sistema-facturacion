@@ -89,6 +89,7 @@ namespace CRUDS
             // 
             this.DgvCondicionesDePago.AllowUserToAddRows = false;
             this.DgvCondicionesDePago.AllowUserToDeleteRows = false;
+            this.DgvCondicionesDePago.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvCondicionesDePago.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvCondicionesDePago.Location = new System.Drawing.Point(4, 4);
             this.DgvCondicionesDePago.Margin = new System.Windows.Forms.Padding(4);

@@ -81,6 +81,7 @@
             // 
             // DgvArticulo
             // 
+            this.DgvArticulo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvArticulo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvArticulo.Location = new System.Drawing.Point(27, 90);
             this.DgvArticulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -96,7 +97,7 @@
             this.BtnBuscar.BackgroundImage = global::CRUDS.Properties.Resources.search;
             this.BtnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnBuscar.Location = new System.Drawing.Point(683, 16);
-            this.BtnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnBuscar.Name = "BtnBuscar";
             this.BtnBuscar.Size = new System.Drawing.Size(43, 41);
             this.BtnBuscar.TabIndex = 5;
@@ -108,7 +109,7 @@
             this.BtnAgregar.BackgroundImage = global::CRUDS.Properties.Resources.plus;
             this.BtnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnAgregar.Location = new System.Drawing.Point(776, 18);
-            this.BtnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(43, 38);
             this.BtnAgregar.TabIndex = 6;

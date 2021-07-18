@@ -97,6 +97,7 @@ namespace CRUDS
             // 
             this.DgvClientes.AllowUserToAddRows = false;
             this.DgvClientes.AllowUserToDeleteRows = false;
+            this.DgvClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvClientes.Location = new System.Drawing.Point(4, 4);
             this.DgvClientes.Margin = new System.Windows.Forms.Padding(4);

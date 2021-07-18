@@ -38,20 +38,6 @@ namespace CRUDS
 
         public string currentEstado = "False";
 
-        //private void cbxEstado_CheckedChanged(object sender, EventArgs e)
-        //{
-        //    if (cbxEstado.Checked == true)
-        //    {
-        //        currentEstado = "True";
-        //        cbxEstado.CheckState = CheckState.Checked;
-        //    }
-        //    else
-        //    {
-        //        currentEstado = "False";
-        //        cbxEstado.CheckState = CheckState.Unchecked;
-        //    }
-        //}
-
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
             string sql = "";
@@ -77,7 +63,9 @@ namespace CRUDS
                     sql += "where id = " + TxtID.Text;
                 }
                 SqlCommand cmd = new SqlCommand(sql, con);
+                con.Open();
                 cmd.ExecuteNonQuery();
+                con.Close();
                 MessageBox.Show("Registro guardado exitosamente");
                 this.Close();
             }

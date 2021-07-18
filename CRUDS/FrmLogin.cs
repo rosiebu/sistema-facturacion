@@ -24,21 +24,24 @@ namespace CRUDS
             ocon.con.Open();
             string claveEncriptadaMD5 = getMD5Hash(txtContrasena.Text);
             Console.WriteLine(claveEncriptadaMD5);
-            string sSQL = "select id from Usuarios where contraseña = '" + claveEncriptadaMD5 + "' and id_usuario = '" + txtUsuario.Text + "'";
+            string sSQL = "select 'S' from Usuarios where contraseña = '" + claveEncriptadaMD5 + "' and id_usuario = '" + txtUsuario.Text + "'";
             SqlCommand ocmd = new SqlCommand(sSQL, ocon.con);
             string sExiste = "";
-            try
+            Console.WriteLine(ocmd);
+            if (ocmd.ExecuteScalar() != null)
             {
-                sExiste = ocmd.ExecuteScalar().ToString();
+                try
+                {
+                    sExiste = ocmd.ExecuteScalar().ToString();
+                }
+                catch (Exception ex)
+                {
+                    string sError = ex.Message;
+                }
             }
-            catch (Exception ex)
-            {
-                string sError = ex.Message;
-            }
-
             if (!String.IsNullOrEmpty(sExiste))
             {
-                FrmMenu frmMenu = new FrmMenu();
+                FrmMenu frmMenu = new FrmMenu("admin");
                 this.Hide();
                 frmMenu.Show();
             }

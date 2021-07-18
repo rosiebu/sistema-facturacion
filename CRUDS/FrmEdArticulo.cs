@@ -29,6 +29,7 @@ namespace CRUDS
         {
             if (Modo.Equals("U"))
             {
+                TxtID.Text = ID;
                 TxtDescripcion.Text = descripcion;
                 numCosto.Text = costoUnitario.ToString();
                 numPrecio.Text = precioUnitario.ToString();
@@ -62,7 +63,7 @@ namespace CRUDS
                     sql += "consto_unitario = '" + numCosto.Text.ToString() + "',";
                     sql += "precio_unitario = '" + numPrecio.Text.ToString() + "',";
                     sql += "estado = '" + currentEstado + "' ";
-                    sql += "where id = " + TxtID.Text;
+                    sql += "where id = '" + TxtID.Text + "' ";
                 }
                 SqlCommand cmd = new SqlCommand(sql, con);
                 cmd.ExecuteNonQuery();

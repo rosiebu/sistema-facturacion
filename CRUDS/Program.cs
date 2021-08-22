@@ -1,4 +1,8 @@
-﻿using System;
+﻿//PARTICIPANTES:
+//Christopher Suazo A00102478
+//Rosahilda Herrera A00104590
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +20,8 @@ namespace CRUDS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmLogin());
+            //Application.Run(new FrmLogin());
+            Application.Run(new Form1());
         }
     }
 }

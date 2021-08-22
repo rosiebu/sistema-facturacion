@@ -27,7 +27,6 @@ namespace CRUDS
             string sSQL = "select 'S' from Usuarios where contraseña = '" + claveEncriptadaMD5 + "' and id_usuario = '" + txtUsuario.Text + "'";
             SqlCommand ocmd = new SqlCommand(sSQL, ocon.con);
             string sExiste = "";
-            Console.WriteLine(ocmd);
             if (ocmd.ExecuteScalar() != null)
             {
                 try

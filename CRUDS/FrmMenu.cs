@@ -60,5 +60,10 @@ namespace CRUDS
             FrmVendedor frm = new FrmVendedor();
             frm.ShowDialog();
         }
+
+        private void Form1_Close(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

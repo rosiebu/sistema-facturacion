@@ -100,6 +100,7 @@ C:\Users\christopher\Desktop\UNIVERSIDAD\sistema-facturacion\CRUDS\obj\Debug\CRU
 C:\Users\christopher\Desktop\UNIVERSIDAD\sistema-facturacion\CRUDS\obj\Debug\CRUDS.csproj.CoreCompileInputs.cache
 C:\Users\christopher\Desktop\UNIVERSIDAD\sistema-facturacion\CRUDS\obj\Debug\CRUDS.exe
 C:\Users\christopher\Desktop\UNIVERSIDAD\sistema-facturacion\CRUDS\obj\Debug\CRUDS.pdb
-C:\Users\christopher\Desktop\UNIVERSIDAD\sistema-facturacion\CRUDS\obj\Debug\CRUDS.csprojAssemblyReference.cache
 C:\Users\christopher\Desktop\UNIVERSIDAD\sistema-facturacion\CRUDS\obj\Debug\CRUDS.FrmMenu.resources
 C:\Users\christopher\Desktop\UNIVERSIDAD\sistema-facturacion\CRUDS\obj\Debug\CRUDS.FrmLogin.resources
+C:\Users\christopher\Desktop\UNIVERSIDAD\sistema-facturacion\CRUDS\obj\Debug\CRUDS.Form1.resources
+C:\Users\christopher\Desktop\UNIVERSIDAD\sistema-facturacion\CRUDS\obj\Debug\CRUDS.csprojAssemblyReference.cache

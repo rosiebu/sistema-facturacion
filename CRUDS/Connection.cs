@@ -64,26 +64,61 @@ namespace CRUDS
                 
         }
 
-        public int getMany2oneId(string table, string whereColumn, string match = "null", string clause="=")
+        public dynamic getMany2oneId(string table, string whereColumn, string match = "null", string clause="=", string selectColumn="id")
         {
             try
             {
-                string query = "SELECT id FROM " + table + " where " + whereColumn + " " + clause + " '" + match +"'";
+                string query = "SELECT "+ selectColumn +" FROM " + table + " where " + whereColumn + " " + clause + " '" + match +"'";
                 Console.WriteLine(query);
                 con.Open();
                 SqlCommand cursor = new SqlCommand(query, con);
                 SqlDataReader reader = cursor.ExecuteReader();
-                int res = 0;
+                dynamic res = false;
                 while (reader.Read())
                 {
-                    res = (int)reader[0];
+                    res = (dynamic)reader[0];
                 }
+                reader.Close();
+                con.Close();
                 return res;
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al ejecutar la consulta " + ex.Message);
                 return 0;
+            }
+        }
+        public string getLastIdOnTable(string table) {
+            try
+            {
+                string query = "SELECT TOP 1 " + "id" + " From " + table + " Order by id desc;";
+                SqlCommand cursor = new SqlCommand(query, con);
+                con.Open();
+                SqlDataReader reader = cursor.ExecuteReader();
+                string id = "";
+                
+                reader.Read();
+                id = reader[0].ToString();
+                
+                reader.Close();
+                con.Close();
+                return id;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar la consulta " + ex.Message);
+                return "";
+            }
+        }
+        public void executeNonQuery(string query) {
+            try { 
+                SqlCommand cmd = new SqlCommand(query, con);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Registro guardado exitosamente");
+            } catch (Exception ex) {
+                MessageBox.Show("Error al guardar. " + ex.Message);
             }
         }
     }

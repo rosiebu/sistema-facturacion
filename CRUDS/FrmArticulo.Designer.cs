@@ -59,7 +59,7 @@
             "Precio Unitario",
             "Estado"});
             this.CbxCriterio.Location = new System.Drawing.Point(61, 16);
-            this.CbxCriterio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CbxCriterio.Margin = new System.Windows.Forms.Padding(2);
             this.CbxCriterio.Name = "CbxCriterio";
             this.CbxCriterio.Size = new System.Drawing.Size(113, 21);
             this.CbxCriterio.TabIndex = 1;
@@ -77,7 +77,7 @@
             // TxtABuscar
             // 
             this.TxtABuscar.Location = new System.Drawing.Point(261, 18);
-            this.TxtABuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtABuscar.Margin = new System.Windows.Forms.Padding(2);
             this.TxtABuscar.Name = "TxtABuscar";
             this.TxtABuscar.Size = new System.Drawing.Size(224, 20);
             this.TxtABuscar.TabIndex = 3;
@@ -87,7 +87,7 @@
             this.DgvArticulo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DgvArticulo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvArticulo.Location = new System.Drawing.Point(20, 73);
-            this.DgvArticulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DgvArticulo.Margin = new System.Windows.Forms.Padding(2);
             this.DgvArticulo.Name = "DgvArticulo";
             this.DgvArticulo.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.DgvArticulo.RowTemplate.Height = 24;
@@ -104,6 +104,7 @@
             this.BtnExportar.Size = new System.Drawing.Size(34, 32);
             this.BtnExportar.TabIndex = 7;
             this.BtnExportar.UseVisualStyleBackColor = true;
+            this.BtnExportar.Click += new System.EventHandler(this.BtnExportar_Click);
             // 
             // BtnAgregar
             // 
@@ -140,7 +141,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.CbxCriterio);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmArticulo";
             this.Text = "Articulos";
             this.Load += new System.EventHandler(this.FrmArticulo_Load);

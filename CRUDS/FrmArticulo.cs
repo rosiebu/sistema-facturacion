@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
+using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +17,9 @@ namespace CRUDS
     {
         public int Rol { get; set; }
 
+        DataTable oDt = new DataTable();
         Connection conection = new Connection();
+        //SqlConnection oCon = null;
 
         string table = "Articulo";
 
@@ -26,10 +31,7 @@ namespace CRUDS
 
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
-
             buscar();
-
-            
             //ejecutarConsulta();
         }
         private void buscar()
@@ -49,9 +51,12 @@ namespace CRUDS
         }
 
 
-
+       
         private void FrmArticulo_Load(object sender, EventArgs e)
         {
+            //oCon = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=SISTEMAFACTURACION;Integrated Security=True");
+            //oCon.Open();
+
             if (Rol != 1)
             {
                 BtnAgregar.Visible = false;
@@ -80,6 +85,40 @@ namespace CRUDS
             catch (Exception ex)
             {
                 MessageBox.Show("Error al seleccionar el registro. " + ex.Message);
+            }
+        }
+
+
+        //Exporta a un documento Excel pero está vacío, probablemente por un problema de conexión con la base
+        //de datos
+        private void BtnExportar_Click(object sender, EventArgs e)
+        {
+            writeFileHeader("Id, Descripcion, Costo Unitario, Precio Unitario, Estado");
+
+            foreach (DataRow row in oDt.Rows)
+            {
+                string linea = "";
+                foreach (DataColumn dc in oDt.Columns)
+                {
+                    linea += row[dc].ToString() + ",";
+                }
+                writeFileLine(linea);
+            }
+
+            Process.Start(@"C:\prueba.csv");
+        }
+        private void writeFileLine(string pLine)
+        {
+            using (System.IO.StreamWriter w = File.AppendText("C:\\prueba.csv"))
+            {
+                w.WriteLine(pLine);
+            }
+        }
+        private void writeFileHeader(string pLine)
+        {
+            using (System.IO.StreamWriter w = File.CreateText("C:\\prueba.csv"))
+            {
+                w.WriteLine(pLine);
             }
         }
     }

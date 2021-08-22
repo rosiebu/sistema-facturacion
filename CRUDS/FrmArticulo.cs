@@ -26,18 +26,23 @@ namespace CRUDS
         public FrmArticulo()
         {
             InitializeComponent();
-            
         }
 
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
-            buscar();
+            buscar("");
             //ejecutarConsulta();
         }
-        private void buscar()
+        private void buscar(string pFiltro)
         {
+            string sSQL = "select * from articulo ";
+            if (pFiltro.Trim().Length > 0)
+                sSQL += pFiltro;
+            oDt = new DataTable();
+
             DataTable dt = conection.ejecutarConsulta(table, CbxCriterio.Text, TxtABuscar.Text);
             DgvArticulo.DataSource = dt;
+            //DgvArticulo.DataSource = oDT;
             DgvArticulo.Refresh();
         }
         
@@ -63,7 +68,7 @@ namespace CRUDS
                 BtnAgregar.Enabled = false;
             }
             CbxCriterio.SelectedIndex = 0;
-            buscar();
+            buscar("");
         }
 
         private void DgvArticulo_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -87,39 +92,45 @@ namespace CRUDS
                 MessageBox.Show("Error al seleccionar el registro. " + ex.Message);
             }
         }
+        private void ExportarDatos(DataGridView datalistado)
+        {
+            try
+            {
+                Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
+                excel.Application.Workbooks.Add(true);
+                int IndiceColumna = 0;
+                foreach (DataGridViewColumn columna in datalistado.Columns) //leer las columnas 
+                {
+                    IndiceColumna++;
+                    excel.Cells[1, IndiceColumna] = columna.Name;
+                }
+                int IndiceFila = 0;
+                foreach (DataGridViewRow fila in datalistado.Rows) // leer las filas de las columnas 
+                {
+                    IndiceFila++;
+                    IndiceColumna = 0;
+                    foreach (DataGridViewColumn columna in datalistado.Columns)
+                    {
+                        IndiceColumna++;
+                        excel.Cells[IndiceFila + 1, IndiceColumna] = fila.Cells[columna.Name].Value;
+                    }
+                }
+                excel.Visible = true;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No hay Registros a Exportar.");
+            }
+        }
+
 
 
         //Exporta a un documento Excel pero está vacío, probablemente por un problema de conexión con la base
         //de datos
         private void BtnExportar_Click(object sender, EventArgs e)
         {
-            writeFileHeader("Id, Descripcion, Costo Unitario, Precio Unitario, Estado");
+            ExportarDatos(DgvArticulo);
+        }
 
-            foreach (DataRow row in oDt.Rows)
-            {
-                string linea = "";
-                foreach (DataColumn dc in oDt.Columns)
-                {
-                    linea += row[dc].ToString() + ",";
-                }
-                writeFileLine(linea);
-            }
-
-            Process.Start(@"C:\prueba.csv");
-        }
-        private void writeFileLine(string pLine)
-        {
-            using (System.IO.StreamWriter w = File.AppendText("C:\\prueba.csv"))
-            {
-                w.WriteLine(pLine);
-            }
-        }
-        private void writeFileHeader(string pLine)
-        {
-            using (System.IO.StreamWriter w = File.CreateText("C:\\prueba.csv"))
-            {
-                w.WriteLine(pLine);
-            }
-        }
     }
 }
